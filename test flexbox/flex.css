@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  border: 2px solid gold;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.box {
+  padding: 1rem;
+  color: white;
+  margin: 1rem;
+  border: 2px solid black;
+  width: 200px;
+  flex-basis: 100%;
+}
+
+.box1 {
+  background-color: green;
+}
+
+.container .box2 {
+  background-color: blue;
+}
+
+.box3 {
+  background-color: violet;
+}
+
+@media (min-width: 768px) {
+  .box {
+    flex: 1;
+  }
+
+  .container .box2 {
+    flex-grow: 3;
+  }
+}/*# sourceMappingURL=flex.css.map */

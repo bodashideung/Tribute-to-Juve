@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: hsl(0, 0%, 10%);
+  --clr-secondary: hsl(0,0,5%) ;
+  --clr-accent:white;
+  --ff-primary: "Montserrat", sans-serif;
+  --fw-title: 700;
+  --fw-text: 400;
+  --fw-sub:300;
+  --box-border: border-radius: 10%;
+}
+
+body {
+  background-color: var(--clr-primary);
+  font-family: var(--ff-primary);
+}
+
+/*----------------------*/
+/*-----utility class----*/
+/*----------------------*/
+.rounded-border {
+  border: var(--box-border);
+}
+
+.box-style {
+  box-shadow: var(--box-style);
+}
+
+/*----------------------*/
+.container {
+  width: 100%;
+  display: grid;
+  color: var(--clr-accent);
+}
+
+.hero {
+  padding: 2rem;
+  margin: 2rem;
+}
+.hero h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.4rem;
+  color: var(--clr-accent);
+  line-height: 2.8rem;
+  text-align: center;
+}
+.hero h1 span {
+  font-size: clamp(4rem,10vw,8rem);
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.box {
+  transition: 0.5s ease-in;
+  cursor: pointer;
+  padding: 2rem;
+}
+.box__menu {
+  background: linear-gradient(145deg, #171717, #1c1c1c);
+  box-shadow: 6px 6px 6px #161616, -6px -6px 6px #212121;
+  border-radius: 10%;
+  border: none;
+  width: 16rem;
+  height: 16rem;
+  margin: 0 auto;
+  padding: 1rem;
+  transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.box:hover {
+  background-color: #d7d5d5;
+}
+.box:hover .box__menu--hover1 {
+  color: #161616;
+  border-radius: 10%;
+  background: linear-gradient(145deg, #c2c0c0, #e6e4e4);
+  box-shadow: 5px 5px 9px #9a9898, -5px -5px 10px #f7f5f5;
+}
+
+.box2 {
+  background-color: #d7d5d5;
+}
+.box2:hover {
+  background-color: var(--clr-primary);
+}
+.box2:hover .box__menu--hover2 {
+  background: linear-gradient(145deg, #171717, #1c1c1c);
+  box-shadow: 5px 5px 5px #161616, -5px -5px 5px #212121;
+  color: #d7d5d5;
+}
+.box2 .box__menu--hover2 {
+  color: #161616;
+  border-radius: 10%;
+  background: linear-gradient(145deg, #c2c0c0, #e6e4e4);
+  box-shadow: 5px 5px 9px #9a9898, -5px -5px 10px #f7f5f5;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    justify-content: center;
+  }
+
+  .hero {
+    grid-area: 1/1/2/2;
+    margin: 0;
+  }
+  .hero h1 {
+    line-height: 4rem;
+  }
+}/*# sourceMappingURL=main.css.map */
